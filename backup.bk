@@ -1,0 +1,18 @@
+using System.Linq;
+using Godot;
+using Godot.Collections;
+
+namespace NewGameProject
+{
+  public class NewScript : Node
+  {
+    public override void _Ready()
+    {
+      var array = new Array() {"test", "test2" }.Cast<string>().ToArray();
+      var json = JsonConvert.SerializeObject(array);
+      GD.Print(json);
+            
+      base._Ready();
+    }
+  }
+}
