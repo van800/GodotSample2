@@ -46,6 +46,9 @@
       <Version>1.0.0</Version>
       <PrivateAssets>All</PrivateAssets>
     </PackageReference>
+    <PackageReference Include="Newtonsoft.Json">
+      <Version>12.0.3</Version>
+    </PackageReference>
     <Reference Include="GodotSharp">
       <HintPath>$(ProjectDir)/.mono/assemblies/$(ApiConfiguration)/GodotSharp.dll</HintPath>
       <Private>False</Private>
@@ -57,7 +60,8 @@
     <Reference Include="System" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="**/*.cs" Exclude=".mono/**;ClassLibrary1/**" />
+    <Compile Include="**/*.cs" Exclude=".mono/**;ClassLibrary1/**;addons/**" />
+    <Compile Include="addons/**" Condition=" '$(Configuration)' == 'Debug' " />
     <Content Include="**/*.tscn" />
   </ItemGroup>
   <ItemGroup>
