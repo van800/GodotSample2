@@ -61,7 +61,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="**/*.cs" Exclude=".mono/**;ClassLibrary1/**;addons/**" />
-    <Compile Include="addons/**" Condition=" '$(Configuration)' == 'Debug' " />
+    <Compile Include="addons/**/*.cs" Condition=" '$(Configuration)' == 'Debug' " />
     <Content Include="**/*.tscn" />
   </ItemGroup>
   <ItemGroup>
