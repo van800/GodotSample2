@@ -16,13 +16,8 @@ _global_script_class_icons={
 [application]
 
 config/name="New Game Project"
-run/main_scene="res://new scene.tscn"
+run/main_scene="res://Spatial.tscn"
 config/icon="res://icon.png"
-
-[global]
-
-open=false
-activation=false
 
 [rendering]
 

@@ -10,18 +10,13 @@ public class new_script : Node
     // Called when the node enters the scene tree for the first time.
     public override void _Ready()
     {
-        
+        base._Ready();
     }
 
-    public override void _Process(float delta)
-    {
-        GD.Print("test");
-        base._Process(delta);
-    }
-
-    //  // Called every frame. 'delta' is the elapsed time since the previous frame.
-//  public override void _Process(float delta)
-//  {
-//      
-//  }
+//  // Called every frame. 'delta' is the elapsed time since the previous frame.
+  public override void _Process(float delta)
+  {
+      GD.Print(delta);
+      base._Process(delta);
+  }
 }
